@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "shortCode": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "esRules": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "qbRules": {
+                    "type": "string"
+                },
+                "shortCode": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

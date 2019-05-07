@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "customFilters": {
+                    "items": {
+                        "properties": {
+                            "key": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "options": {
+                                "items": {
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "hiddenFilters": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

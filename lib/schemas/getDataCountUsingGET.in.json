@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "stage": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "LIVE",
+                "PREVIEW"
+            ]
+        },
+        "queryName": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "activeUsersNow",
+                "dailyActiveUsers",
+                "averageDailyActiveUsers",
+                "lastMonthlyActiveUsers",
+                "monthlyActiveUsers",
+                "averageSessionDuration"
+            ]
+        }
+    }
+}

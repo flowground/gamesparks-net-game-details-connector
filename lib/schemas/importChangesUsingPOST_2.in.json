@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "owner": {
+            "required": true,
+            "type": "string"
+        },
+        "repo": {
+            "required": true,
+            "type": "string"
+        },
+        "changeset": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "createSnapshot": {
+                    "type": "boolean"
+                },
+                "selectedFiles": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

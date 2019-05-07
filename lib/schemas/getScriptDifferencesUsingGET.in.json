@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "snapshotId1": {
+            "required": true,
+            "type": "string"
+        },
+        "snapshotId2": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

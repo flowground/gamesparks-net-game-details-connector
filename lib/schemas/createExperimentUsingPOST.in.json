@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "active": {
+                    "type": "boolean"
+                },
+                "changedFieldsAndInitialValues": {
+                    "type": "object"
+                },
+                "complete": {
+                    "type": "boolean"
+                },
+                "config": {
+                    "properties": {
+                        "playerMongoQuery": {
+                            "type": "string"
+                        },
+                        "playerQuery": {
+                            "type": "string"
+                        },
+                        "variants": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "endDate": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "id": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "measurements": {
+                    "type": "string"
+                },
+                "measurementsEsQuery": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "percentHash": {
+                    "type": "string"
+                },
+                "publishedStages": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "startDate": {
+                    "format": "date-time",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

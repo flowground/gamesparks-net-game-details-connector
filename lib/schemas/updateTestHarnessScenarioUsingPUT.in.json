@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "scenarioName": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "scenarioJson": {
+                    "type": "object"
+                },
+                "scenarioName": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

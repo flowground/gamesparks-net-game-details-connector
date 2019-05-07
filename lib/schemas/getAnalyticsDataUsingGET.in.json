@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "stage": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "LIVE",
+                "PREVIEW"
+            ]
+        },
+        "dataType": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "activeDevices",
+                "activeLocations",
+                "activeUsers",
+                "averageBandwidthPerUser",
+                "averageDauOverMau",
+                "averageJsExecutionTime",
+                "averageRequestsPerUser",
+                "averageResponseTime",
+                "averageResponseTimePerType",
+                "scriptLogLevelsCount",
+                "sessionAnalytic",
+                "storagePerUser",
+                "customAnalyticTotal",
+                "customAnalyticUser",
+                "timedAnalyticTotal",
+                "sessionAnalyticTotal",
+                "connectedUsers"
+            ]
+        },
+        "precision": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "HOURLY",
+                "DAILY",
+                "MONTHLY"
+            ]
+        },
+        "startDate": {
+            "required": true,
+            "type": "string",
+            "format": "date"
+        },
+        "endDate": {
+            "required": true,
+            "type": "string",
+            "format": "date"
+        },
+        "keys": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

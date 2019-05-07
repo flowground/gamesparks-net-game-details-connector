@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "body": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "string",
+            "format": "binary"
+        }
+    }
+}

@@ -1,0 +1,1460 @@
+{
+    "title": "GameSparks Game Details",
+    "description": "The API to manage the GameSparks game details",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/gamesparks.net/game-details/v2/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://config2.gamesparks.net/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "accessToken": {
+                "label": "accessToken (accessToken)",
+                "viewClass": "TextFieldView"
+            },
+            "username": {
+                "label": "Username (basic)",
+                "viewClass": "TextFieldView"
+            },
+            "password": {
+                "label": "Password (basic)",
+                "viewClass": "TextFieldView"
+            },
+            "jwt": {
+                "label": "jwt (jwt)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getRegionOptionsUsingGET": {
+            "main": "./lib/actions/getRegionOptionsUsingGET.js",
+            "title": "getRegionOptions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRegionOptionsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAnalyticsDataUsingGET": {
+            "main": "./lib/actions/getAnalyticsDataUsingGET.js",
+            "title": "Returns the results of executed query defined by the parameters passed in",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAnalyticsDataUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getDataCountUsingGET": {
+            "main": "./lib/actions/getDataCountUsingGET.js",
+            "title": "Returns the count of executed query",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getDataCountUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRetentionUsingGET": {
+            "main": "./lib/actions/getRetentionUsingGET.js",
+            "title": "Returns the percentage of user retention over the last 30 days",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRetentionUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getBillingDetails": {
+            "main": "./lib/actions/getBillingDetails.js",
+            "title": "Retrieves the Billing Details",
+            "description": "Retrieves the Billing Details.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getBillingDetails.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putBillingDetails": {
+            "main": "./lib/actions/putBillingDetails.js",
+            "title": "Updates the Billing Details",
+            "description": "Updates the Billing Details.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putBillingDetails.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGameSummaryUsingGET": {
+            "main": "./lib/actions/getGameSummaryUsingGET.js",
+            "title": "getGameSummary",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGameSummaryUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testPushAmazonNotificationsUsingPOST": {
+            "main": "./lib/actions/testPushAmazonNotificationsUsingPOST.js",
+            "title": "testPushAmazonNotifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testPushAmazonNotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testPushAppleDevNotificationsUsingPOST": {
+            "main": "./lib/actions/testPushAppleDevNotificationsUsingPOST.js",
+            "title": "testPushAppleDevNotifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testPushAppleDevNotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testPushAppleProdNotificationsUsingPOST": {
+            "main": "./lib/actions/testPushAppleProdNotificationsUsingPOST.js",
+            "title": "testPushAppleProdNotifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testPushAppleProdNotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testPushGoogleNotificationsUsingPOST": {
+            "main": "./lib/actions/testPushGoogleNotificationsUsingPOST.js",
+            "title": "testPushGoogleNotifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testPushGoogleNotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testWindows8NotificationsUsingPOST": {
+            "main": "./lib/actions/testWindows8NotificationsUsingPOST.js",
+            "title": "testWindows8Notifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testWindows8NotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testWindowsPhone8NotificationsUsingPOST": {
+            "main": "./lib/actions/testWindowsPhone8NotificationsUsingPOST.js",
+            "title": "testWindowsPhone8Notifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testWindowsPhone8NotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testViberIntegrationNotificationsUsingPOST": {
+            "main": "./lib/actions/testViberIntegrationNotificationsUsingPOST.js",
+            "title": "testViberIntegrationNotifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testViberIntegrationNotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "testViberProductionNotificationsUsingPOST": {
+            "main": "./lib/actions/testViberProductionNotificationsUsingPOST.js",
+            "title": "testViberProductionNotifications",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/testViberProductionNotificationsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getScriptDifferencesUsingGET": {
+            "main": "./lib/actions/getScriptDifferencesUsingGET.js",
+            "title": "getScriptDifferences",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getScriptDifferencesUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "exportZipUsingGET": {
+            "main": "./lib/actions/exportZipUsingGET.js",
+            "title": "exportZip",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/exportZipUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "importAcceptUsingPOST": {
+            "main": "./lib/actions/importAcceptUsingPOST.js",
+            "title": "importAccept",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/importAcceptUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "importZipUsingPOST": {
+            "main": "./lib/actions/importZipUsingPOST.js",
+            "title": "importZip",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/importZipUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getScriptVersionsUsingGET_1": {
+            "main": "./lib/actions/getScriptVersionsUsingGET_1.js",
+            "title": "getScriptVersions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getScriptVersionsUsingGET_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getScriptVersionsUsingGET": {
+            "main": "./lib/actions/getScriptVersionsUsingGET.js",
+            "title": "getScriptVersions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getScriptVersionsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSegmentQueryFiltersUsingGET": {
+            "main": "./lib/actions/getSegmentQueryFiltersUsingGET.js",
+            "title": "getSegmentQueryFilters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSegmentQueryFiltersUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSegmentQueryFiltersConfigUsingGET": {
+            "main": "./lib/actions/getSegmentQueryFiltersConfigUsingGET.js",
+            "title": "getSegmentQueryFiltersConfig",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSegmentQueryFiltersConfigUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateSegmentQueryFiltersConfigUsingPUT": {
+            "main": "./lib/actions/updateSegmentQueryFiltersConfigUsingPUT.js",
+            "title": "updateSegmentQueryFiltersConfig",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateSegmentQueryFiltersConfigUsingPUT.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSegmentQueryStandardFiltersUsingGET": {
+            "main": "./lib/actions/getSegmentQueryStandardFiltersUsingGET.js",
+            "title": "getSegmentQueryStandardFilters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSegmentQueryStandardFiltersUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSnapshotsUsingGET_1": {
+            "main": "./lib/actions/getSnapshotsUsingGET_1.js",
+            "title": "getSnapshots",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSnapshotsUsingGET_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createSnapshotsUsingPOST": {
+            "main": "./lib/actions/createSnapshotsUsingPOST.js",
+            "title": "createSnapshots",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createSnapshotsUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getLiveSnapshotIdUsingGET": {
+            "main": "./lib/actions/getLiveSnapshotIdUsingGET.js",
+            "title": "getLiveSnapshotId",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLiveSnapshotIdUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSnapshotsUsingGET": {
+            "main": "./lib/actions/getSnapshotsUsingGET.js",
+            "title": "getSnapshots",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSnapshotsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "revertToSnapshotUsingPOST": {
+            "main": "./lib/actions/revertToSnapshotUsingPOST.js",
+            "title": "revertToSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/revertToSnapshotUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteSnapshotUsingDELETE_1": {
+            "main": "./lib/actions/deleteSnapshotUsingDELETE_1.js",
+            "title": "deleteSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteSnapshotUsingDELETE_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSnapshotUsingGET": {
+            "main": "./lib/actions/getSnapshotUsingGET.js",
+            "title": "getSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSnapshotUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "copySnapshotToNewGameUsingPOST": {
+            "main": "./lib/actions/copySnapshotToNewGameUsingPOST.js",
+            "title": "copySnapshotToNewGame",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/copySnapshotToNewGameUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "copySnapshotToExistingGameUsingPOST_1": {
+            "main": "./lib/actions/copySnapshotToExistingGameUsingPOST_1.js",
+            "title": "copySnapshotToExistingGame",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/copySnapshotToExistingGameUsingPOST_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "publishSnapshotUsingPOST_1": {
+            "main": "./lib/actions/publishSnapshotUsingPOST_1.js",
+            "title": "publishSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/publishSnapshotUsingPOST_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "unpublishSnapshotUsingPOST": {
+            "main": "./lib/actions/unpublishSnapshotUsingPOST.js",
+            "title": "unpublishSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/unpublishSnapshotUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTestHarnessScenariosUsingGET": {
+            "main": "./lib/actions/getTestHarnessScenariosUsingGET.js",
+            "title": "getTestHarnessScenarios",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTestHarnessScenariosUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createTestHarnessScenarioUsingPOST": {
+            "main": "./lib/actions/createTestHarnessScenarioUsingPOST.js",
+            "title": "createTestHarnessScenario",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createTestHarnessScenarioUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteTestHarnessScenarioUsingDELETE": {
+            "main": "./lib/actions/deleteTestHarnessScenarioUsingDELETE.js",
+            "title": "deleteTestHarnessScenario",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteTestHarnessScenarioUsingDELETE.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTestHarnessScenarioUsingGET": {
+            "main": "./lib/actions/getTestHarnessScenarioUsingGET.js",
+            "title": "getTestHarnessScenario",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTestHarnessScenarioUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateTestHarnessScenarioUsingPUT": {
+            "main": "./lib/actions/updateTestHarnessScenarioUsingPUT.js",
+            "title": "updateTestHarnessScenario",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateTestHarnessScenarioUsingPUT.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateCredentialSecretUsingPOST": {
+            "main": "./lib/actions/updateCredentialSecretUsingPOST.js",
+            "title": "Resets the secret of a credential",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateCredentialSecretUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGamesEndpointsUsingGET": {
+            "main": "./lib/actions/getGamesEndpointsUsingGET.js",
+            "title": "getGamesEndpoints",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGamesEndpointsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getLastSelectionUsingGET": {
+            "main": "./lib/actions/getLastSelectionUsingGET.js",
+            "title": "getLastSelection",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLastSelectionUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getImportChangesUsingGET": {
+            "main": "./lib/actions/getImportChangesUsingGET.js",
+            "title": "getImportChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getImportChangesUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "importChangesUsingPOST": {
+            "main": "./lib/actions/importChangesUsingPOST.js",
+            "title": "importChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/importChangesUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getImportChangesUsingGET_1": {
+            "main": "./lib/actions/getImportChangesUsingGET_1.js",
+            "title": "getImportChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getImportChangesUsingGET_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "importChangesUsingPOST_1": {
+            "main": "./lib/actions/importChangesUsingPOST_1.js",
+            "title": "importChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/importChangesUsingPOST_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getLastSelectionUsingGET_1": {
+            "main": "./lib/actions/getLastSelectionUsingGET_1.js",
+            "title": "getLastSelection",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLastSelectionUsingGET_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getTreeImportChangesUsingGET": {
+            "main": "./lib/actions/getTreeImportChangesUsingGET.js",
+            "title": "getTreeImportChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTreeImportChangesUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "importTreeChangesUsingPOST": {
+            "main": "./lib/actions/importTreeChangesUsingPOST.js",
+            "title": "importTreeChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/importTreeChangesUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getImportChangesUsingGET_2": {
+            "main": "./lib/actions/getImportChangesUsingGET_2.js",
+            "title": "getImportChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getImportChangesUsingGET_2.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "importChangesUsingPOST_2": {
+            "main": "./lib/actions/importChangesUsingPOST_2.js",
+            "title": "importChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/importChangesUsingPOST_2.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getImportChangesUsingGET_3": {
+            "main": "./lib/actions/getImportChangesUsingGET_3.js",
+            "title": "getImportChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getImportChangesUsingGET_3.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "importChangesUsingPOST_3": {
+            "main": "./lib/actions/importChangesUsingPOST_3.js",
+            "title": "importChanges",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/importChangesUsingPOST_3.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getExperimentsUsingGET": {
+            "main": "./lib/actions/getExperimentsUsingGET.js",
+            "title": "getExperiments",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExperimentsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createExperimentUsingPOST": {
+            "main": "./lib/actions/createExperimentUsingPOST.js",
+            "title": "createExperiment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createExperimentUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteExperimentUsingDELETE": {
+            "main": "./lib/actions/deleteExperimentUsingDELETE.js",
+            "title": "deleteExperiment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteExperimentUsingDELETE.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getExperimentUsingGET": {
+            "main": "./lib/actions/getExperimentUsingGET.js",
+            "title": "getExperiment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExperimentUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateExperimentUsingPUT": {
+            "main": "./lib/actions/updateExperimentUsingPUT.js",
+            "title": "updateExperiment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateExperimentUsingPUT.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "doActionExperimentUsingPOST": {
+            "main": "./lib/actions/doActionExperimentUsingPOST.js",
+            "title": "doActionExperiment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/doActionExperimentUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listQueriesUsingGET": {
+            "main": "./lib/actions/listQueriesUsingGET.js",
+            "title": "listQueries",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listQueriesUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createQueryUsingPOST": {
+            "main": "./lib/actions/createQueryUsingPOST.js",
+            "title": "createQuery",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createQueryUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteQueryUsingDELETE": {
+            "main": "./lib/actions/deleteQueryUsingDELETE.js",
+            "title": "deleteQuery",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteQueryUsingDELETE.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getQueryUsingGET": {
+            "main": "./lib/actions/getQueryUsingGET.js",
+            "title": "getQuery",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getQueryUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateQueryUsingPUT": {
+            "main": "./lib/actions/updateQueryUsingPUT.js",
+            "title": "updateQuery",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateQueryUsingPUT.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listScreensUsingGET": {
+            "main": "./lib/actions/listScreensUsingGET.js",
+            "title": "listScreens",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listScreensUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createScreenUsingPOST": {
+            "main": "./lib/actions/createScreenUsingPOST.js",
+            "title": "createScreen",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createScreenUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listExecutableScreensUsingGET": {
+            "main": "./lib/actions/listExecutableScreensUsingGET.js",
+            "title": "listExecutableScreens",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listExecutableScreensUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteScreenUsingDELETE": {
+            "main": "./lib/actions/deleteScreenUsingDELETE.js",
+            "title": "deleteScreen",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteScreenUsingDELETE.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getScreenUsingGET": {
+            "main": "./lib/actions/getScreenUsingGET.js",
+            "title": "getScreen",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getScreenUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateScreenUsingPUT": {
+            "main": "./lib/actions/updateScreenUsingPUT.js",
+            "title": "updateScreen",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateScreenUsingPUT.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listSnapshotsUsingGET": {
+            "main": "./lib/actions/listSnapshotsUsingGET.js",
+            "title": "listSnapshots",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listSnapshotsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createSnapshotUsingPOST": {
+            "main": "./lib/actions/createSnapshotUsingPOST.js",
+            "title": "createSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createSnapshotUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteSnapshotUsingDELETE": {
+            "main": "./lib/actions/deleteSnapshotUsingDELETE.js",
+            "title": "deleteSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteSnapshotUsingDELETE.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "copySnapshotToExistingGameUsingPOST": {
+            "main": "./lib/actions/copySnapshotToExistingGameUsingPOST.js",
+            "title": "copySnapshotToExistingGame",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/copySnapshotToExistingGameUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "publishSnapshotUsingPOST": {
+            "main": "./lib/actions/publishSnapshotUsingPOST.js",
+            "title": "publishSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/publishSnapshotUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "revertSnapshotUsingPOST": {
+            "main": "./lib/actions/revertSnapshotUsingPOST.js",
+            "title": "revertSnapshot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/revertSnapshotUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listSnippetsUsingGET": {
+            "main": "./lib/actions/listSnippetsUsingGET.js",
+            "title": "listSnippets",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listSnippetsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "createSnippetUsingPOST": {
+            "main": "./lib/actions/createSnippetUsingPOST.js",
+            "title": "createSnippet",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/createSnippetUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteSnippetUsingDELETE": {
+            "main": "./lib/actions/deleteSnippetUsingDELETE.js",
+            "title": "deleteSnippet",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteSnippetUsingDELETE.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getSnippetUsingGET": {
+            "main": "./lib/actions/getSnippetUsingGET.js",
+            "title": "getSnippet",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getSnippetUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateSnippetUsingPUT": {
+            "main": "./lib/actions/updateSnippetUsingPUT.js",
+            "title": "updateSnippet",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateSnippetUsingPUT.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "restoreDeletedGameUsingPOST": {
+            "main": "./lib/actions/restoreDeletedGameUsingPOST.js",
+            "title": "restoreDeletedGame",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/restoreDeletedGameUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "setGameRegionUsingPOST": {
+            "main": "./lib/actions/setGameRegionUsingPOST.js",
+            "title": "setGameRegion",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/setGameRegionUsingPOST.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getGameRegionOptionsUsingGET": {
+            "main": "./lib/actions/getGameRegionOptionsUsingGET.js",
+            "title": "getGameRegionOptions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getGameRegionOptionsUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listUsingGET": {
+            "main": "./lib/actions/listUsingGET.js",
+            "title": "list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listDeletedUsingGET": {
+            "main": "./lib/actions/listDeletedUsingGET.js",
+            "title": "listDeleted",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listDeletedUsingGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

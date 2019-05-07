@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "shortCode": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "groups": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "shortCode": {
+                    "type": "string"
+                },
+                "template": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

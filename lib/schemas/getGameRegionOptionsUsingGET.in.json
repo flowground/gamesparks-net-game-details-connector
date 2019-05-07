@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "gameApiKey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

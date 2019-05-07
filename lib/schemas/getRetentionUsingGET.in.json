@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "apiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "stage": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "LIVE",
+                "PREVIEW"
+            ]
+        }
+    }
+}
